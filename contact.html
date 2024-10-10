@@ -29,19 +29,24 @@
         </nav>
     </header>
 
-    <!--NewsLetter Section-->
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or comments, feel free to reach out to us using the form below.</p>
+            <form action="submit_form.php" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <section id="newsletter" class="section-p1 section m1">
-        <div class="newstext">
-            <h4>Sign Up For NewsLetters</h4>
-            <p>Get Email updates about our latest shop and <span>special offers.</span></p>
-        </div>
-        <form class="form">
-            <input type="text" placeholder="Your Email address">
-            <button class="normal" type="submit">Sign Up</button>
-        </form>
-    </section>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="submit" value="Send Message" class="submit-btn">
+            </form>
+        </section>
+    </main>
     <!--Footer Section-->
 
     <footer class="section-p1">
@@ -96,4 +101,112 @@
     </footer>
 
 </body>
+<style>
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact-form .submit-btn {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
 </html>
